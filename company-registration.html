@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civico Company Registration</title>
+    <link rel="stylesheet" href="form-styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-header">
+            <img src="logo.png" alt="Civico Logo" class="logo">
+            <h2>Company Registration<h2>
+        </div>
+        <form class="account-form">
+            <label for="company-name">Company Name</label>
+            <input type="text" id="company-name" name="company-name" required>
+
+            <label for="registration-number">Company Registration Number</label>
+            <input type="text" id="registration-number" name="registration-number" required>
+
+            <label for="vat-number">VAT Number</label>
+            <input type="text" id="vat-number" name="vat-number">
+
+            <label for="company-address-line-1">Company Address Line 1</label>
+            <input type="text" id="company-address-line-1" name="company-address-line-1" required>
+
+            <label for="company-address-line-2">Company Address Line 2</label>
+            <input type="text" id="company-address-line-2" name="company-address-line-2">
+
+            <label for="postal-code">Postal Code</label>
+            <input type="text" id="postal-code" name="postal-code" required>
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" value="Netherlands" readonly>
+
+            <label for="contact-first-name">Contact Person's First Name</label>
+            <input type="text" id="contact-first-name" name="contact-first-name" required>
+
+            <label for="contact-last-name">Contact Person's Last Name</label>
+            <input type="text" id="contact-last-name" name="contact-last-name" required>
+
+            <label for="contact-email">Contact Person's Email</label>
+            <input type="email" id="contact-email" name="contact-email" required>
+
+            <label for="contact-phone">Contact Person's Phone Number</label>
+            <input type="tel" id="contact-phone" name="contact-phone" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <div class="consent-checkbox">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">I agree to the terms and conditions</label>
+            </div>
+
+            <a href="company-login.html">
+                <button type="button">Register</button>
+            </a>  
+        </form>
+    </div>
+</body>
+</html>

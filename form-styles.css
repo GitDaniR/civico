@@ -34,19 +34,20 @@ body {
 
 h2 {
     color: #003366;
+    font-size: 1.5em;
 }
 
-.registration-form label {
+.account-form label {
     display: block;
     margin: 10px 0 5px;
     color: #003366;
 }
 
-.registration-form input[type="text"],
-.registration-form input[type="email"],
-.registration-form input[type="password"],
-.registration-form input[type="tel"],
-.registration-form input[type="date"] {
+.account-form input[type="text"],
+.account-form input[type="email"],
+.account-form input[type="password"],
+.account-form input[type="tel"],
+.account-form input[type="date"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -55,13 +56,18 @@ h2 {
     font-size: 16px;
 }
 
-.registration-form .consent-checkbox {
+.account-form input[readonly] {
+    background-color: #f1f1f1;
+    color: #333333;
+}
+
+.consent-checkbox {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
 }
 
-.registration-form .consent-checkbox input {
+.consent-checkbox input {
     margin-right: 10px;
 }
 
@@ -79,4 +85,25 @@ button {
 
 button:hover {
     background-color: #005399;
+}
+
+.extra-options {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.extra-options a {
+    color: #005399;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.extra-options a:hover {
+    text-decoration: underline;
+}
+
+.extra-options p {
+    font-size: 14px;
+    color: #333333;
+    margin-top: 10px;
 }
