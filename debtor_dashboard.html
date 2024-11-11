@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Debtor Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard-styles.css">
 </head>
 <body>
      <!-- Debtor Dashboard -->
@@ -12,7 +12,7 @@
     <h1>Civico Debtor Dashboard</h1>
     <div class="content">
       <div class="table-section">
-        <h2>Unpaid Invoices</h2>
+        <h2>Invoices</h2>
         <table>
           <thead>
             <tr>
@@ -20,23 +20,83 @@
               <th>Amount</th>
               <th>Due Date</th>
               <th>Status</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>#003</td>
-              <td>€200</td>
-              <td>2024-11-20</td>
-              <td>Overdue</td>
+            <tr class="paid">
+                <td>#001</td>
+                <td>€500</td>
+                <td>2024-10-10</td>
+                <td>Paid</td>
+                <td><button class="delete-button">Delete</button></td>
             </tr>
-            <tr>
-              <td>#004</td>
-              <td>€100</td>
-              <td>2024-12-05</td>
-              <td>Pending</td>
+            <tr class="overdue">
+                <td>#003</td>
+                <td>€200</td>
+                <td>2024-11-20</td>
+                <td>Overdue</td>
+                <td><button class="pay-button">Pay</button></td>
             </tr>
-            <!-- Add more rows as needed -->
-          </tbody>
+            <tr class="pending">
+                <td>#004</td>
+                <td>€100</td>
+                <td>2024-12-05</td>
+                <td>Pending</td>
+                <td><button class="pay-button">Pay</button></td>
+            </tr>
+            <tr class="paid">
+                <td>#005</td>
+                <td>€450</td>
+                <td>2024-09-25</td>
+                <td>Paid</td>
+                <td><button class="delete-button">Delete</button></td>
+            </tr>
+            <tr class="overdue">
+                <td>#006</td>
+                <td>€300</td>
+                <td>2024-11-30</td>
+                <td>Overdue</td>
+                <td><button class="pay-button">Pay</button></td>
+            </tr>
+            <tr class="pending">
+                <td>#007</td>
+                <td>€750</td>
+                <td>2024-12-15</td>
+                <td>Pending</td>
+                <td><button class="pay-button">Pay</button></td>
+            </tr>
+            <tr class="paid">
+                <td>#008</td>
+                <td>€1,200</td>
+                <td>2024-08-01</td>
+                <td>Paid</td>
+                <td><button class="delete-button">Delete</button></td>
+            </tr>
+            <tr class="overdue">
+                <td>#009</td>
+                <td>€900</td>
+                <td>2024-11-18</td>
+                <td>Overdue</td>
+                <td><button class="pay-button">Pay</button></td>
+            </tr>
+            <tr class="pending">
+                <td>#010</td>
+                <td>€1,500</td>
+                <td>2024-12-20</td>
+                <td>Pending</td>
+                <td><button class="pay-button">Pay</button></td>
+            </tr>
+            <tr class="paid">
+                <td>#011</td>
+                <td>€600</td>
+                <td>2024-10-22</td>
+                <td>Paid</td>
+                <td><button class="delete-button">Delete</button></td>
+            </tr>
+        </tbody>
+        
+        
         </table>
       </div>
       <div class="resources-section">
