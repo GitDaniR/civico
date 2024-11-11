@@ -1,0 +1,286 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333333;
+}
+
+h1, h2, h3, p {
+    margin-bottom: 10px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    width: 120px;
+    margin-right: 20px;
+}
+
+.navbar-left a {
+    color: #005399;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.navbar-left a:hover {
+    color: #0073e6;
+}
+
+.cta-button {
+    color: #ffffff;
+    background-color: #005399;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.cta-button:hover {
+    background-color: #0073e6;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+.hero h1 {
+    color: #003366;
+    font-size: 2em;
+}
+
+.hero p {
+    font-size: 1.1em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.primary-cta {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.primary-cta:hover {
+    background-color: #005399;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Partner Logos */
+.partners {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #f9f9f9;
+}
+
+.partner-logos img {
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+/* Value Proposition */
+.value-proposition {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.value-proposition ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.value-proposition li {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+/* Features Section */
+.features {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature-item {
+    width: 250px;
+    margin: 20px;
+    text-align: center;
+}
+
+.feature-item img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+/* Demo / Walkthrough Video */
+.product-demo {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.product-demo video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+/* Statistics Section */
+.statistics {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.statistics h2 {
+    font-size: 1.8em;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.stat-items {
+    display: flex;
+    justify-content: center;
+}
+
+.stat-item {
+    margin: 0 20px;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2em;
+    color: #003366;
+}
+
+.stat-item p {
+    font-size: 1em;
+    color: #333333;
+}
+
+/* Testimonials Carousel */
+.testimonials {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    overflow: auto;
+    gap: 20px;
+    padding: 10px;
+    scroll-behavior: smooth;
+}
+
+.carousel-item {
+    min-width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item p {
+    font-size: 1em;
+    color: #666666;
+}
+
+.carousel-item span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #003366;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 40px 20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #003366;
+}
+
+.faq-item p {
+    display: none;
+    margin-top: 10px;
+}
+
+.faq-item.active p {
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9em;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
