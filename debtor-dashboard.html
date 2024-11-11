@@ -16,16 +16,20 @@
         <table>
           <thead>
             <tr>
-              <th>Invoice</th>
-              <th>Amount</th>
-              <th>Due Date</th>
-              <th>Status</th>
-              <th></th>
+                <th>Invoice</th>
+                <th>Company</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Due Date</th>
+                <th>Status</th>
+                <th>Action</th>
             </tr>
-          </thead>
-          <tbody>
+        </thead>
+        <tbody>
             <tr class="paid">
                 <td>#001</td>
+                <td>PowerGrid</td>
+                <td>Electricity Bill</td>
                 <td>€500</td>
                 <td>2024-10-10</td>
                 <td>Paid</td>
@@ -33,6 +37,8 @@
             </tr>
             <tr class="overdue">
                 <td>#003</td>
+                <td>WaterWorks</td>
+                <td>Water Utility Bill</td>
                 <td>€200</td>
                 <td>2024-11-20</td>
                 <td>Overdue</td>
@@ -40,13 +46,17 @@
             </tr>
             <tr class="pending">
                 <td>#004</td>
+                <td>BroadNet</td>
+                <td>Internet Service</td>
                 <td>€100</td>
                 <td>2024-12-05</td>
                 <td>Pending</td>
-                <td><button class="pay-button">Pay</button></td>
+                <td></td>
             </tr>
             <tr class="paid">
                 <td>#005</td>
+                <td>GasCo</td>
+                <td>Gas Utility Bill</td>
                 <td>€450</td>
                 <td>2024-09-25</td>
                 <td>Paid</td>
@@ -54,6 +64,8 @@
             </tr>
             <tr class="overdue">
                 <td>#006</td>
+                <td>City Water</td>
+                <td>Water Utility Bill</td>
                 <td>€300</td>
                 <td>2024-11-30</td>
                 <td>Overdue</td>
@@ -61,13 +73,17 @@
             </tr>
             <tr class="pending">
                 <td>#007</td>
+                <td>CableNow</td>
+                <td>TV Subscription</td>
                 <td>€750</td>
                 <td>2024-12-15</td>
                 <td>Pending</td>
-                <td><button class="pay-button">Pay</button></td>
+                <td></td>
             </tr>
             <tr class="paid">
                 <td>#008</td>
+                <td>MobilePlus</td>
+                <td>Mobile Phone Bill</td>
                 <td>€1,200</td>
                 <td>2024-08-01</td>
                 <td>Paid</td>
@@ -75,6 +91,8 @@
             </tr>
             <tr class="overdue">
                 <td>#009</td>
+                <td>RentCo</td>
+                <td>Monthly Rent</td>
                 <td>€900</td>
                 <td>2024-11-18</td>
                 <td>Overdue</td>
@@ -82,32 +100,89 @@
             </tr>
             <tr class="pending">
                 <td>#010</td>
+                <td>CityGas</td>
+                <td>Gas Utility Bill</td>
                 <td>€1,500</td>
                 <td>2024-12-20</td>
                 <td>Pending</td>
-                <td><button class="pay-button">Pay</button></td>
+                <td></td>
             </tr>
             <tr class="paid">
                 <td>#011</td>
+                <td>HealthCare</td>
+                <td>Health Insurance</td>
                 <td>€600</td>
                 <td>2024-10-22</td>
                 <td>Paid</td>
                 <td><button class="delete-button">Delete</button></td>
             </tr>
         </tbody>
-        
-        
+       
         </table>
       </div>
-      <div class="resources-section">
-        <h2>Additional Resources</h2>
-        <ul>
-          <li><a href="#">Payment Plans</a></li>
-          <li><a href="#">Educational Resources</a></li>
-          <li><a href="#">Personalized Help</a></li>
-        </ul>
-      </div>
+    </div>
+    <div class="resources-section">
+      <h2>Additional Resources</h2>
+      <ul>
+        <li><a href="#">Educational Resources</a></li>
+        <li><a href="#">Personalized Help</a></li>
+      </ul>
     </div>
   </section>
+
+  <!-- Pay Modal -->
+<div id="pay-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2>Payment Options</h2>
+    
+    <button class="pay-now-button">Pay Now</button>
+
+    <h3>Or Set Up a Payment Plan</h3>
+    <form class="payment-plan-form">
+      <label for="installments">Number of Installments:</label>
+      <input type="number" id="installments" name="installments" min="1" placeholder="e.g., 3" required>
+
+      <label>Expected cost per month: €300</label>
+
+      <label for="start-date">Start Date:</label>
+      <input type="date" id="start-date" name="start-date" required>
+
+      <button type="submit">Set Up Plan</button>
+    </form>
+  </div>
+</div>
+<script>
+  // Get elements
+  const payButtons = document.querySelectorAll('.pay-button');
+  const modal = document.getElementById('pay-modal');
+  const closeButton = document.querySelector('.close-button');
+  const payNowButton = document.querySelector('.pay-now-button');
+
+  // Open modal when any "Pay" button is clicked
+  payButtons.forEach(button => {
+      button.addEventListener('click', () => {
+          modal.style.display = 'block';
+      });
+  });
+
+  // Close modal when the close button is clicked
+  closeButton.addEventListener('click', () => {
+      modal.style.display = 'none';
+  });
+
+  // Close modal when clicking outside of the modal content
+  window.addEventListener('click', (event) => {
+      if (event.target == modal) {
+          modal.style.display = 'none';
+      }
+  });
+
+  // Placeholder action for "Pay Now" button
+  payNowButton.addEventListener('click', () => {
+      alert('Payment successful!');
+      modal.style.display = 'none';
+  });
+</script>
 </body>
 </html>
