@@ -3,58 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Civico Debtor Dashboard</title>
-
-    <link rel="stylesheet" href="style.css">
+    <title>Debtor Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="navbar">
-        <a href="#">Dashboard</a>
-        <a href="#">Customer service</a>
-        <a href="#">FAQ</a>
-        <a href="#">About us</a>
+     <!-- Debtor Dashboard -->
+  <section class="dashboard">
+    <h1>Civico Debtor Dashboard</h1>
+    <div class="content">
+      <div class="table-section">
+        <h2>Unpaid Invoices</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Invoice</th>
+              <th>Amount</th>
+              <th>Due Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#003</td>
+              <td>€200</td>
+              <td>2024-11-20</td>
+              <td>Overdue</td>
+            </tr>
+            <tr>
+              <td>#004</td>
+              <td>€100</td>
+              <td>2024-12-05</td>
+              <td>Pending</td>
+            </tr>
+            <!-- Add more rows as needed -->
+          </tbody>
+        </table>
+      </div>
+      <div class="resources-section">
+        <h2>Additional Resources</h2>
+        <ul>
+          <li><a href="#">Payment Plans</a></li>
+          <li><a href="#">Educational Resources</a></li>
+          <li><a href="#">Personalized Help</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="container">
-        <div class="dashboard">
-            <h2>Unpaid Invoices</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Invoice</th>
-                        <th>Amount</th>
-                        <th>Due Date</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>INV001</td>
-                        <td>€1500</td>
-                        <td>2024-11-01</td>
-                        <td>Pending</td>
-                    </tr>
-                    <tr>
-                        <td>INV002</td>
-                        <td>€2300</td>
-                        <td>2024-11-05</td>
-                        <td>Paid</td>
-                    </tr>
-                    <tr>
-                        <td>INV003</td>
-                        <td>€890</td>
-                        <td>2024-11-10</td>
-                        <td>Overdue</td>
-                    </tr>
-                    <!-- Add more rows as necessary -->
-                </tbody>
-            </table>
-        </div>
-        <div class="resources">
-            <h2>Additional Resources</h2>
-            <p><strong>Payment Plans:</strong> Set up a payment plan to manage your invoices.</p>
-            <p><strong>Educational Resources:</strong> Learn more about managing your finances effectively.</p>
-            <p><strong>Personalized Help:</strong> Contact our support team for personalized assistance.</p>
-        </div>
-    </div>
+  </section>
 </body>
 </html>

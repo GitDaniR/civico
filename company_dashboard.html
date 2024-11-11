@@ -3,84 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Civico Dashboard</title>
-    
-    <link rel="stylesheet" href="style.css">
+    <title>Company Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="navbar">
-        <a href="#">Dashboard</a>
-        <a href="#">Customer service</a>
-        <a href="#">FAQ</a>
-        <a href="#">About us</a>
-    </div>
-    <div class="container">
-        <div class="dashboard">
+    <section class="dashboard">
+        <div class="header">
+            <h1>Civico Company Dashboard</h1>
+            <button class="import-button">Import Invoices</button>
+        </div>
+        <div class="content">
+          <div class="table-section">
             <h2>Outstanding Receivables</h2>
             <table>
                 <thead>
-                    <tr>
-                        <th>Invoice</th>
-                        <th>Customer</th>
-                        <th>Amount</th>
-                        <th>Due Date</th>
-                        <th>Status</th>
-                    </tr>
+                  <tr>
+                    <th>Invoice</th>
+                    <th>Customer</th>
+                    <th>Amount</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                  </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>INV001</td>
-                        <td>Customer A</td>
-                        <td>€1500</td>
-                        <td>2024-11-01</td>
-                        <td>Pending</td>
-                    </tr>
-                    <tr>
-                        <td>INV002</td>
-                        <td>Customer B</td>
-                        <td>€2300</td>
-                        <td>2024-11-05</td>
-                        <td>Paid</td>
-                    </tr>
-                    <tr>
-                        <td>INV003</td>
-                        <td>Customer C</td>
-                        <td>€890</td>
-                        <td>2024-11-10</td>
-                        <td>Overdue</td>
-                    </tr>
-                    <tr>
-                        <td>INV004</td>
-                        <td>Customer D</td>
-                        <td>€1200</td>
-                        <td>2024-11-12</td>
-                        <td>Pending</td>
-                    </tr>
-                    <tr>
-                        <td>INV005</td>
-                        <td>Customer E</td>
-                        <td>€950</td>
-                        <td>2024-11-15</td>
-                        <td>Overdue</td>
-                    </tr>
-                    <tr>
-                        <td>INV006</td>
-                        <td>Customer F</td>
-                        <td>€1400</td>
-                        <td>2024-11-20</td>
-                        <td>Pending</td>
-                    </tr>
-                    <!-- Add more rows as necessary -->
+                  <tr>
+                    <td>#001</td>
+                    <td>John Doe</td>
+                    <td>€500</td>
+                    <td>2024-11-15</td>
+                    <td>Overdue</td>
+                  </tr>
+                  <tr>
+                    <td>#002</td>
+                    <td>Jane Smith</td>
+                    <td>€300</td>
+                    <td>2024-12-01</td>
+                    <td>Pending</td>
+                  </tr>
+                  <tr>
+                    <td>#003</td>
+                    <td>Acme Corp</td>
+                    <td>€1,200</td>
+                    <td>2024-11-10</td>
+                    <td>Paid</td>
+                  </tr>
+                  <tr>
+                    <td>#004</td>
+                    <td>Global Solutions</td>
+                    <td>€2,800</td>
+                    <td>2024-12-20</td>
+                    <td>Overdue</td>
+                  </tr>
+                  <tr>
+                    <td>#005</td>
+                    <td>Sara Lee</td>
+                    <td>€450</td>
+                    <td>2024-11-25</td>
+                    <td>Pending</td>
+                  </tr>
+                  <tr>
+                    <td>#006</td>
+                    <td>Innovate Ltd</td>
+                    <td>€3,500</td>
+                    <td>2025-01-15</td>
+                    <td>Pending</td>
+                  </tr>
+                  <tr>
+                    <td>#007</td>
+                    <td>Prime Retailers</td>
+                    <td>€850</td>
+                    <td>2024-12-05</td>
+                    <td>Paid</td>
+                  </tr>
+                  <tr>
+                    <td>#008</td>
+                    <td>Metro Market</td>
+                    <td>€1,100</td>
+                    <td>2024-11-30</td>
+                    <td>Overdue</td>
+                  </tr>
+                  <tr>
+                    <td>#009</td>
+                    <td>Alpha Solutions</td>
+                    <td>€650</td>
+                    <td>2024-11-22</td>
+                    <td>Pending</td>
+                  </tr>
+                  <tr>
+                    <td>#010</td>
+                    <td>Bright Minds</td>
+                    <td>€400</td>
+                    <td>2024-12-02</td>
+                    <td>Paid</td>
+                  </tr>
+                  <tr>
+                    <td>#011</td>
+                    <td>Health Corp</td>
+                    <td>€5,000</td>
+                    <td>2024-12-18</td>
+                    <td>Overdue</td>
+                  </tr>
+                  <tr>
+                    <td>#012</td>
+                    <td>Zenith Media</td>
+                    <td>€900</td>
+                    <td>2024-11-28</td>
+                    <td>Pending</td>
+                  </tr>
+                  <tr>
+                    <td>#013</td>
+                    <td>Legacy Design</td>
+                    <td>€1,800</td>
+                    <td>2024-11-16</td>
+                    <td>Overdue</td>
+                  </tr>
+                  <tr>
+                    <td>#014</td>
+                    <td>Eco Supplies</td>
+                    <td>€2,200</td>
+                    <td>2025-01-05</td>
+                    <td>Pending</td>
+                  </tr>
+                  <tr>
+                    <td>#015</td>
+                    <td>Market Hub</td>
+                    <td>€750</td>
+                    <td>2024-11-19</td>
+                    <td>Paid</td>
+                  </tr>
                 </tbody>
-            </table>
+              </table>
+              
+          </div>
+          <div class="stats-section">
+            <h2>Add New Invoice</h2>
+            <form class="new-invoice-form">
+                <label for="invoice-number">Invoice Number:</label>
+                <input type="text" id="invoice-number" name="invoice-number" placeholder="#016" required>
+
+                <label for="customer-name">Customer Name:</label>
+                <input type="text" id="customer-name" name="customer-name" placeholder="Customer Name" required>
+
+                <label for="amount">Amount (€):</label>
+                <input type="number" id="amount" name="amount" placeholder="Amount" required>
+
+                <label for="due-date">Due Date:</label>
+                <input type="date" id="due-date" name="due-date" required>
+
+                <label for="status">Status:</label>
+                <select id="status" name="status">
+                    <option value="Pending">Pending</option>
+                    <option value="Paid">Paid</option>
+                    <option value="Overdue">Overdue</option>
+                </select>
+
+          <button type="submit">Add Invoice</button>
+        </form>
+        <h2>Relevant Statistics</h2>
+            <ul>
+              <li>Total Outstanding Receivables: €21,700</li>
+              <li>Total Paid Receivables: €2,700</li>
+              <li>Average Invoice Amount: €1,447</li>
+              <li>Average Collection Time: 45 days</li>
+              <li>Overdue Percentage: 40%</li>
+              <li>Highest Outstanding Invoice: €5,000 (Health Corp)</li>
+              <li>Upcoming Due in 7 Days: 3 invoices</li>
+              <li>Customer with Most Overdue Invoices: Global Solutions</li>
+            </ul>
+          </div>
+          
         </div>
-        <div class="graphs">
-            <h2>Statistics</h2>
-            <p>Total Outstanding: €7300</p>
-            <p>Paid Invoices: €2300</p>
-            <p>Overdue Invoices: €1840</p>
-            <p>Pending Invoices: €3160</p>
-        </div>
-    </div>
+      </section>
 </body>
 </html>
