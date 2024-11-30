@@ -3,236 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Dashboard</title>
+    <title>Company Dashboard - Civico</title>
     <link rel="stylesheet" href="dashboard-styles.css">
 </head>
 <body>
     <section class="dashboard">
         <div class="header">
-            <h1>Civico Company Dashboard</h1>
+            <h1>Civico</h1>
             <button class="import-button">Import Invoices</button>
         </div>
         <div class="content">
-          <div class="table-section">
-            <h2>Outstanding Receivables</h2>
-            <table>
-                <thead>
-                  <tr>
-                    <th>Invoice</th>
-                    <th>Customer</th>
-                    <th>Amount</th>
-                    <th>Due Date</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>#001</td>
-                    <td>John Doe</td>
-                    <td>€500</td>
-                    <td>2024-11-15</td>
-                    <td>Overdue</td>
-                  </tr>
-                  <tr>
-                    <td>#002</td>
-                    <td>Jane Smith</td>
-                    <td>€300</td>
-                    <td>2024-12-01</td>
-                    <td>Pending</td>
-                  </tr>
-                  <tr>
-                    <td>#003</td>
-                    <td>Acme Corp</td>
-                    <td>€1,200</td>
-                    <td>2024-11-10</td>
-                    <td>Paid</td>
-                  </tr>
-                  <tr>
-                    <td>#004</td>
-                    <td>Global Solutions</td>
-                    <td>€2,800</td>
-                    <td>2024-12-20</td>
-                    <td>Overdue</td>
-                  </tr>
-                  <tr>
-                    <td>#005</td>
-                    <td>Sara Lee</td>
-                    <td>€450</td>
-                    <td>2024-11-25</td>
-                    <td>Pending</td>
-                  </tr>
-                  <tr>
-                    <td>#006</td>
-                    <td>Innovate Ltd</td>
-                    <td>€3,500</td>
-                    <td>2025-01-15</td>
-                    <td>Pending</td>
-                  </tr>
-                  <tr>
-                    <td>#007</td>
-                    <td>Prime Retailers</td>
-                    <td>€850</td>
-                    <td>2024-12-05</td>
-                    <td>Paid</td>
-                  </tr>
-                  <tr>
-                    <td>#008</td>
-                    <td>Metro Market</td>
-                    <td>€1,100</td>
-                    <td>2024-11-30</td>
-                    <td>Overdue</td>
-                  </tr>
-                  <tr>
-                    <td>#009</td>
-                    <td>Alpha Solutions</td>
-                    <td>€650</td>
-                    <td>2024-11-22</td>
-                    <td>Pending</td>
-                  </tr>
-                  <tr>
-                    <td>#010</td>
-                    <td>Bright Minds</td>
-                    <td>€400</td>
-                    <td>2024-12-02</td>
-                    <td>Paid</td>
-                  </tr>
-                  <tr>
-                    <td>#011</td>
-                    <td>Health Corp</td>
-                    <td>€5,000</td>
-                    <td>2024-12-18</td>
-                    <td>Overdue</td>
-                  </tr>
-                  <tr>
-                    <td>#012</td>
-                    <td>Zenith Media</td>
-                    <td>€900</td>
-                    <td>2024-11-28</td>
-                    <td>Pending</td>
-                  </tr>
-                  <tr>
-                    <td>#013</td>
-                    <td>Legacy Design</td>
-                    <td>€1,800</td>
-                    <td>2024-11-16</td>
-                    <td>Overdue</td>
-                  </tr>
-                  <tr>
-                    <td>#014</td>
-                    <td>Eco Supplies</td>
-                    <td>€2,200</td>
-                    <td>2025-01-05</td>
-                    <td>Pending</td>
-                  </tr>
-                  <tr>
-                    <td>#015</td>
-                    <td>Market Hub</td>
-                    <td>€750</td>
-                    <td>2024-11-19</td>
-                    <td>Paid</td>
-                  </tr>
-                </tbody>
-              </table>
-              
-          </div>
-          <div class="stats-section">
-            <h2>Add New Invoice</h2>
-            <form class="new-invoice-form">
-                <label for="invoice-number">Invoice Number:</label>
-                <input type="text" id="invoice-number" name="invoice-number" placeholder="#016" required>
-
-                <label for="customer-name">Customer Name:</label>
-                <input type="text" id="customer-name" name="customer-name" placeholder="Customer Name" required>
-
-                <label for="amount">Amount (€):</label>
-                <input type="number" id="amount" name="amount" placeholder="Amount" required>
-
-                <label for="due-date">Due Date:</label>
-                <input type="date" id="due-date" name="due-date" required>
-
-                <label for="status">Status:</label>
-                <select id="status" name="status">
-                    <option value="Pending">Pending</option>
-                    <option value="Paid">Paid</option>
-                    <option value="Overdue">Overdue</option>
-                </select>
-
-                <button type="submit">Add Invoice</button>
-        </form>
-        <h2>Relevant Statistics</h2>
-            <ul>
-              <li>Total Outstanding Receivables: €21,700</li>
-              <li>
-                <span>Total Paid Receivables: €2,700</span>
-                <button class="expand-button" onClick="openStatisticModal('Total Paid Receivables')">Expand</button>
-              </li>
-              <li>
-                <span>Average Invoice Amount: €1,447</span>
-                <button class="expand-button" onClick="openStatisticModal('Average Invoice Amount')">Expand</button>
-              </li>
-              <li>Average Collection Time: 45 days</li>
-              <li><span>
-                Overdue Percentage: 40%</span>
-                <button class="expand-button" onClick="openStatisticModal('Average Collection Time')">Expand</button>
-              </li>
-              <li>Highest Outstanding Invoice: €5,000 (Health Corp)</li>
-              <li>Upcoming Due in 7 Days: 3 invoices</li>
-              <li>Customer with Most Overdue Invoices: Global Solutions</li>
-            </ul>
-
-            <!-- Modal for Detailed Statistics -->
-            <div id="statisticModal" class="modal">
-              <div class="modal-content">
-                <span class="close-button" onclick="closeStatisticModal()">&times;</span>
-                <h2 id="statisticTitle">Statistic Title</h2>
-                
-                <div class="time-filters">
-                  <label><input type="radio" name="timeFilter" value="monthly"> Monthly</label>
-                  <label><input type="radio" name="timeFilter" value="yearly"> Yearly</label>
-                </div>
-                
-                <canvas id="statisticChart" width="400" height="200"></canvas>
-              </div>
+            <div class="table-section">
+                <h2>Receivables Dashboard</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Invoice</th>
+                            <th>Customer</th>
+                            <th>Amount</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Debt Flag</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#001</td>
+                            <td>John Doe</td>
+                            <td>€500</td>
+                            <td>2024-11-15</td>
+                            <td>Overdue</td>
+                            <td>⚠ Multiple Debts</td>
+                        </tr>
+                        <tr>
+                            <td>#002</td>
+                            <td>Jane Smith</td>
+                            <td>€300</td>
+                            <td>2024-12-01</td>
+                            <td>Pending</td>
+                            <td>✔ Single Debt</td>
+                        </tr>
+                        <tr>
+                            <td>#003</td>
+                            <td>Anna Lidow</td>
+                            <td>€1,200</td>
+                            <td>2024-11-10</td>
+                            <td>Paid</td>
+                            <td>✔ Single Debt</td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
             </div>
-          </div>
-          
+            
+            <div class="stats-section">
+              <h2>Add New Invoice</h2>
+              <form class="new-invoice-form">
+                  <label for="invoice-number">Invoice Number:</label>
+                  <input type="text" id="invoice-number" name="invoice-number" placeholder="#016" required>
+  
+                  <label for="customer-name">Customer Name:</label>
+                  <input type="text" id="customer-name" name="customer-name" placeholder="Customer Name" required>
+  
+                  <label for="amount">Amount (€):</label>
+                  <input type="number" id="amount" name="amount" placeholder="Amount" required>
+  
+                  <label for="due-date">Due Date:</label>
+                  <input type="date" id="due-date" name="due-date" required>
+  
+                  <label for="status">Status:</label>
+                  <select id="status" name="status">
+                      <option value="Pending">Pending</option>
+                      <option value="Paid">Paid</option>
+                      <option value="Overdue">Overdue</option>
+                  </select>
+  
+                  <button type="submit">Add Invoice</button>
+                </form>
+
+                <h2>Key Metrics</h2>
+                <ul>
+                    <li>Total Consolidated Debt: €21,700</li>
+                    <li>Average Repayment Plan per Month: €2,000</li>
+                    <li>Overdue Receivables: 40%</li>
+                    <li>Flagged Debtors with Multiple Debts: 5</li>
+                    <li>Upcoming Payments Due in 7 Days: 3 invoices</li>
+                    <li>Largest Receivable: €1,200</li>
+                </ul>
+            </div>
         </div>
-      </section>
-      
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      <script>
-        // Open and close modal functions
-        function openStatisticModal(statistic) {
-          document.getElementById('statisticTitle').textContent = statistic;
-          document.getElementById('statisticModal').style.display = 'block';
-          loadStatisticChart(); // Loads a placeholder chart for demonstration
-        }
-      
-        function closeStatisticModal() {
-          document.getElementById('statisticModal').style.display = 'none';
-        }
-      
-        // Load chart based on selected time filter
-        function loadStatisticChart() {
-          const ctx = document.getElementById('statisticChart').getContext('2d');
-          new Chart(ctx, {
-            type: 'bar',
-            data: {
-              labels: ['January', 'February', 'March', 'April'], // Example labels
-              datasets: [{
-                label: 'Average Invoice Amount',
-                data: [1200, 1500, 1300, 1400], // Example data
-                backgroundColor: 'rgba(32, 78, 207, 0.5)',
-              }]
-            },
-            options: {
-              responsive: true,
-              scales: {
-                y: { beginAtZero: true }
-              }
-            }
-          });
-        }
-      </script>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Example scripts for future functionality
+    </script>
 </body>
 </html>
