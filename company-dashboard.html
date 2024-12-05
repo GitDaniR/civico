@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company Dashboard - Civico</title>
     <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <section class="dashboard">
@@ -33,7 +34,7 @@
                             <td>€500</td>
                             <td>2024-11-15</td>
                             <td>Overdue</td>
-                            <td>⚠ Multiple Debts</td>
+                            <td><i class="fa-solid fa-triangle-exclamation"></i> Multiple Debts</td>
                         </tr>
                         <tr>
                             <td>#002</td>
@@ -41,7 +42,7 @@
                             <td>€300</td>
                             <td>2024-12-01</td>
                             <td>Pending</td>
-                            <td>✔ Single Debt</td>
+                            <td><i class="fa-solid fa-check"></i> Single Debt</td>
                         </tr>
                         <tr>
                             <td>#003</td>
@@ -49,7 +50,7 @@
                             <td>€1,200</td>
                             <td>2024-11-10</td>
                             <td>Paid</td>
-                            <td>✔ Single Debt</td>
+                            <td><i class="fa-solid fa-check"></i> Single Debt</td>
                         </tr>
                         <!-- Add more rows as needed -->
                     </tbody>
@@ -57,28 +58,27 @@
             </div>
             
             <div class="stats-section">
-              <h2>Add New Invoice</h2>
-              <form class="new-invoice-form">
-                  <label for="invoice-number">Invoice Number:</label>
-                  <input type="text" id="invoice-number" name="invoice-number" placeholder="#016" required>
-  
-                  <label for="customer-name">Customer Name:</label>
-                  <input type="text" id="customer-name" name="customer-name" placeholder="Customer Name" required>
-  
-                  <label for="amount">Amount (€):</label>
-                  <input type="number" id="amount" name="amount" placeholder="Amount" required>
-  
-                  <label for="due-date">Due Date:</label>
-                  <input type="date" id="due-date" name="due-date" required>
-  
-                  <label for="status">Status:</label>
-                  <select id="status" name="status">
-                      <option value="Pending">Pending</option>
-                      <option value="Paid">Paid</option>
-                      <option value="Overdue">Overdue</option>
-                  </select>
-  
-                  <button type="submit">Add Invoice</button>
+                <h2>Add New Invoice</h2>
+                <form class="new-invoice-form" id="invoice-form">
+                    <label for="invoice-number">Invoice Number:</label>
+                    <input type="text" id="invoice-number" name="invoice-number" placeholder="#016" required>
+    
+                    <label for="customer-name">Customer Name:</label>
+                    <input type="text" id="customer-name" name="customer-name" placeholder="Customer Name" required>
+    
+                    <label for="amount">Amount (€):</label>
+                    <input type="number" id="amount" name="amount" placeholder="Amount" required>
+    
+                    <label for="due-date">Due Date:</label>
+                    <input type="date" id="due-date" name="due-date" required>
+    
+                    <label for="status">Status:</label>
+                    <select id="status" name="status">
+                        <option value="Pending">Pending</option>
+                        <option value="Overdue">Overdue</option>
+                    </select>
+    
+                    <button type="submit">Add Invoice</button>
                 </form>
 
                 <h2>Key Metrics</h2>
@@ -94,9 +94,35 @@
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Toast Notifications -->
+    <div class="toast" id="welcome-toast">
+        <i class="fas fa-check-circle"></i>
+        Welcome to the Civico Dashboard!
+    </div>
+    <div class="toast hidden" id="success-toast">
+        <i class="fas fa-check-circle"></i>
+        Invoice added successfully!
+    </div>
+
     <script>
-        // Example scripts for future functionality
+        // Remove the welcome toast after 5 seconds
+        setTimeout(() => {
+            const welcomeToast = document.querySelector('#welcome-toast');
+            if (welcomeToast) welcomeToast.remove();
+        }, 5000);
+
+        // Show the success toast after the form is submitted
+        const invoiceForm = document.getElementById('invoice-form');
+        invoiceForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent the form from actually submitting
+            const successToast = document.getElementById('success-toast');
+            successToast.classList.remove('hidden'); // Show the toast
+
+            // Remove the success toast after 5 seconds
+            setTimeout(() => {
+                successToast.classList.add('hidden');
+            }, 5000);
+        });
     </script>
 </body>
 </html>

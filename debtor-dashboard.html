@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Civico Debtor Dashboard</title>
     <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Debtor Dashboard -->
@@ -90,6 +91,20 @@
                 <li><a href="#">Get Help from Civico Advisors</a></li>
             </ul>
         </div>
+
+        <!-- Toast Notification -->
+        <div class="toast">
+            <i class="fas fa-check-circle"></i>
+            Welcome to the Civico Dashboard!
+        </div>
+
+        <script>
+            // Remove the toast after 5 seconds
+            setTimeout(() => {
+                const toast = document.querySelector('.toast');
+                if (toast) toast.remove();
+            }, 5000);
+        </script>
     </section>
 </body>
 </html>
