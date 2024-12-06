@@ -16,7 +16,7 @@
         <div class="content">
             <div class="table-section">
                 <h2>Receivables Dashboard</h2>
-                <table>
+                <table id="receivables-table">
                     <thead>
                         <tr>
                             <th>Invoice</th>
@@ -52,7 +52,6 @@
                             <td>Paid</td>
                             <td><i class="fa-solid fa-check"></i> Single Debt</td>
                         </tr>
-                        <!-- Add more rows as needed -->
                     </tbody>
                 </table>
             </div>
@@ -111,14 +110,45 @@
             if (welcomeToast) welcomeToast.remove();
         }, 5000);
 
-        // Show the success toast after the form is submitted
         const invoiceForm = document.getElementById('invoice-form');
+        const receivablesTable = document.getElementById('receivables-table').querySelector('tbody');
+        const successToast = document.getElementById('success-toast');
+
         invoiceForm.addEventListener('submit', (event) => {
             event.preventDefault(); // Prevent the form from actually submitting
-            const successToast = document.getElementById('success-toast');
-            successToast.classList.remove('hidden'); // Show the toast
+            
+            // Get form values
+            const invoiceNumber = document.getElementById('invoice-number').value.trim();
+            const customerName = document.getElementById('customer-name').value.trim();
+            const amount = document.getElementById('amount').value.trim();
+            const dueDate = document.getElementById('due-date').value;
+            const status = document.getElementById('status').value;
 
-            // Remove the success toast after 5 seconds
+            // Determine debt flag based on status
+            let debtFlagIcon = '<i class="fa-solid fa-check"></i> Single Debt';
+            if (status === 'Overdue') {
+                debtFlagIcon = '<i class="fa-solid fa-triangle-exclamation"></i> Multiple Debts';
+            }
+
+            // Create a new table row
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${invoiceNumber}</td>
+                <td>${customerName}</td>
+                <td>€${amount}</td>
+                <td>${dueDate}</td>
+                <td>${status}</td>
+                <td>${debtFlagIcon}</td>
+            `;
+
+            // Append the new row to the table body
+            receivablesTable.appendChild(newRow);
+
+            // Reset the form
+            invoiceForm.reset();
+
+            // Show success toast
+            successToast.classList.remove('hidden');
             setTimeout(() => {
                 successToast.classList.add('hidden');
             }, 5000);
